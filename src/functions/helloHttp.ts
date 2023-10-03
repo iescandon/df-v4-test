@@ -1,11 +1,12 @@
 import * as df from 'durable-functions';
 import { app, HttpHandler, HttpRequest, HttpResponse, InvocationContext } from '@azure/functions';
 
-const generateHello: HttpHandler = async (request: HttpRequest, context: InvocationContext): Promise<HttpResponse> => {
+const helloHttp: HttpHandler = async (request: HttpRequest, context: InvocationContext): Promise<HttpResponse> => {
     const client = df.getClient(context);
     // const body: unknown = await request.text();
-    console.log(request);
-    const instanceId: string = await client.startNew('helloOrchestrator', { input: request.body });
+    const body: unknown = await request.json();
+
+    const instanceId: string = await client.startNew('helloOrchestrator', { input: body });
     // const instanceId: string = await client.startNew(request.params.orchestratorName, { input: body });
 
     context.log(`Started orchestration with ID = '${instanceId}'.`);
@@ -14,10 +15,10 @@ const generateHello: HttpHandler = async (request: HttpRequest, context: Invocat
 };
 
 // app.http('generateHello', {
-app.post('generateHello', {
-    // methods: ['POST'],
+     // methods: ['POST'],
+app.post('helloHttp', {
     route: 'hello',
     // route: 'orchestrators/{orchestratorName}',
     extraInputs: [df.input.durableClient()],
-    handler: generateHello,
+    handler: helloHttp,
 });
