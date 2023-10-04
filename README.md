@@ -71,14 +71,14 @@ Example response:
     "instanceId": "b9614b54ebba42039d9549d862810223",
     "runtimeStatus": "Completed",
     "input": {
-        "name": "Inez"
+        "name": "Jonah"
     },
     "customStatus": null,
     "output": [
         "Hello, Tokyo",
         "Hello, Seattle",
         "Hello, Cairo",
-        "Hello, Inez"
+        "Hello, Jonah"
     ],
     "createdTime": "2023-10-04T01:33:51Z",
     "lastUpdatedTime": "2023-10-04T01:33:52Z"
