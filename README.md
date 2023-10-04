@@ -4,8 +4,8 @@
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [Brew](https://brew.sh/) (if using MacOS)
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
-- [Node.js 18.x+](https://nodejs.org/en/download/current)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript) version v4.0.5382 or above
+- [Node.js 18](https://nodejs.org/en/download/current)
+- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript)
 - [Postman](https://www.postman.com/downloads/) 
 
 ## Local Setup
